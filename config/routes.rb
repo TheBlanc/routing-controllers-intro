@@ -6,4 +6,6 @@ Rails.application.routes.draw do
   get '/about' => 'pages#about'
 
   get '/contest' => 'pages#contest'
+
+  get '/random/:size' => 'pages#random'
 end
