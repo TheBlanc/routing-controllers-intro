@@ -30,4 +30,12 @@ class PagesController < ApplicationController
     @header = 'This is the many randoms page'
     set_random_url
   end
+
+  def secrets
+    unless params[:magic_word] == "poop"
+      flash[:notice] = "Thats not the magic word! "
+      redirect_to "/welcome"
+    end
+
+  end
 end

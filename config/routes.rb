@@ -10,4 +10,6 @@ Rails.application.routes.draw do
   get '/random/:size' => 'pages#random'
 
   get '/randoms/:size' => 'pages#randoms'
+
+  get '/secrets/:magic_word' => 'pages#secrets'
 end
