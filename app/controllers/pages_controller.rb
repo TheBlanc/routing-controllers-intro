@@ -13,7 +13,7 @@ class PagesController < ApplicationController
 
   def contest
     flash[:notice] = "Sorry! The contest has ended."
-    redirect_to "/welcome"
+    redirect_to root_url
   end
 
   def set_random_url
@@ -23,18 +23,16 @@ class PagesController < ApplicationController
 
   def random
     @header = 'This is the random picture page'
-    set_random_url
   end
 
   def randoms
     @header = 'This is the many randoms page'
-    set_random_url
   end
 
   def secrets
     unless params[:magic_word] == "poop"
       flash[:notice] = "Thats not the magic word! "
-      redirect_to "/welcome"
+      redirect_to root_url
     end
 
   end
